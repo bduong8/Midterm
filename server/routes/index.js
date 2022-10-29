@@ -1,3 +1,7 @@
+// Name: Brian Duong
+// Student#: 300741880
+// Employee Information Application
+
 // modules required for routing
 let express = require("express");
 let router = express.Router();

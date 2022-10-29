@@ -1,3 +1,7 @@
+// Name: Brian Duong
+// Student#: 300741880
+// Employee Information Application
+
 // moddules for node and express
 let createError = require("http-errors");
 let express = require("express");
