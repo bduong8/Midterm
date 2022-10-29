@@ -1,3 +1,7 @@
+// Name: Brian Duong
+// Student#: 300741880
+// Employee Information Application
+
 // modules required for routing
 let express = require("express");
 let router = express.Router();
@@ -63,6 +67,7 @@ router.get('/details/:id', (req, res, next) => {
    *****************/
   let id = req.params.id;
 
+  // Match and find by employee id
   employee.findById(id, (err, employeeToEdit) =>{
     if(err)
     {
@@ -93,6 +98,7 @@ router.post('/details/:id', (req, res, next) => {
     "Salary": req.body.Salary
   });
 
+  // Update the employees database 
   employee.updateOne({_id: id}, updatedEmployee, (err) =>{
     if(err)
     {
@@ -114,6 +120,7 @@ router.get('/delete/:id', (req, res, next) => {
    *****************/
   let id = req.params.id;
 
+  // Delete employee record by the employee id
   employee.remove({_id: id}, (err) => {
     if(err)
     {
